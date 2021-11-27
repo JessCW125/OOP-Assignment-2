@@ -1,4 +1,6 @@
-public class Student extends Person{   
+import java.util.Vector;
+
+public class Student extends Person{
   private String id;
   private String name;
   private Vector courses; // contains all courses the student is registered in
