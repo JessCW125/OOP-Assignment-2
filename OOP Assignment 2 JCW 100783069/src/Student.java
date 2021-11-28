@@ -30,10 +30,7 @@ public class Student extends Person{
 
 		return id;
 
-  	  } 	  
-  	  
-  	  
-  	
+  	  }
 
     public String toString() {
      // return a string representation of a student using the following format:
@@ -45,5 +42,22 @@ public class Student extends Person{
 
 		return null;
 
-  }
+  	}
+
+	  //This method adds a student to a course and updates the list of courses the student
+	// is registered in, the list of students registered in the course and the list of students
+	// in the department
+  	public void registerFor(Course course){
+
+		//checks if the student is already in the course or not
+		if (!(courses.contains(course))){
+
+			courses.add(course);//adds the course to the student's list
+			course.addToClassList(this);//adds student to the class list
+			course.addStudToRegister(this); //adds student to the course's department's registerList
+
+		}
+
+	}
+
 }

@@ -67,4 +67,12 @@ public class Department {
 
    }
 
+   //adds student to the registerList
+   public void addStudentToRegister(Student stud){
+
+      //adds student to the vector
+      registerList.add(stud);
+
+   }
+
 }

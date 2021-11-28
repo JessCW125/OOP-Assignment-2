@@ -37,6 +37,20 @@ public class Course{
      return null;
   }
 
+    //this method adds a student to the classList
+  public void addToClassList(Student stud){
 
+       //adds the student to classList vector
+       classList.add(stud);
+
+   }
+
+   //adds student to the department's registration list
+   public void addStudToRegister(Student stud){
+
+       //adds student to the list within the department class
+       dept.addStudentToRegister(stud);
+
+   }
 
 }
