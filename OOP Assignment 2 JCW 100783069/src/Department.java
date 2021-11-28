@@ -70,8 +70,13 @@ public class Department {
    //adds student to the registerList
    public void addStudentToRegister(Student stud){
 
-      //adds student to the vector
-      registerList.add(stud);
+      //only adds student to the register list if they aren't already on it
+      if (isStudentRegistered(stud)) {
+
+         //adds student to the vector
+         registerList.add(stud);
+
+      }
 
    }
 
