@@ -75,4 +75,20 @@ public class Department {
 
    }
 
+   //prints student info of all students in the department
+   public void printStudentsByName(){
+
+      //outputs a header
+      System.out.println("These are the students in the " + name + " department: \n");
+
+      //repeat encapsulated content for the same amount of times as registerList's size
+      for (int i = 0; i < registerList.size(); i++){
+
+         //print each student's info
+         registerList.elementAt(i).toString();
+
+      }
+
+   }
+
 }
