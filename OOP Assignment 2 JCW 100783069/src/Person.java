@@ -1,16 +1,15 @@
 public class Person {
+
    private String   name;
    
    
-   public Person(String initialName)
-   {
+   public Person(String initialName) {
 
       name = initialName;
       
    }
    
-   public Person()
-   {
+   public Person() {
      
    }
    

@@ -6,7 +6,7 @@ public class Student extends Person{
   private Vector courses; // contains all courses the student is registered in
 
 
-	public Student(String stdName, String stdId) { 
+	public Student(String stdId, String stdName) {
 
 		//call parent class constructor
 		super(stdName);

@@ -1,4 +1,4 @@
- import java.util.HashSet;
+import java.util.HashSet;
 import java.util.Vector;
 
 public class Department {
@@ -35,6 +35,7 @@ public class Department {
    
  	
    public String toString() {
+
       // returns a string representation of department name, number 
       // of courses offered and number of students registered in the
       // department. Use the format:
