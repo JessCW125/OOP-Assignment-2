@@ -10,15 +10,27 @@ public class Department {
    
    public Department(String name, String id) {
 	      // also initialize the vectors
-	   
+
+      //initialize name and id
+      name = this.name;
+      id = this.id;
+
+      //create new vectors to store lists of courses and students
+      Vector<Course> courselist = new Vector<Course>();
+      Vector<Student> registerlist = new Vector<Student>();
+
 	   }
 
    public String getName() {
-	   
+
+      return name;
+
    }
 
    public String getId() {
-	  
+
+      return id;
+
    }
    
  	
@@ -26,6 +38,11 @@ public class Department {
       // returns a string representation of department name, number 
       // of courses offered and number of students registered in the
       // department. Use the format:
-      // ECSE: 53 courses, 460 students     
+      // ECSE: 53 courses, 460 students
+
+      System.out.println(name+ ": " + courseList.size() + " courses, " + registerList.size() + " students");
+
+      return null;
+
    }
 }

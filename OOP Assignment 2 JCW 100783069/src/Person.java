@@ -4,6 +4,8 @@ public class Person {
    
    public Person(String initialName)
    {
+
+      name = initialName;
       
    }
    
@@ -14,13 +16,19 @@ public class Person {
    
    public void setName( String fullName) {
 
+      name = fullName;
+
     }
 
    public String getName() {
-      return null;
+
+      return name;
    }
  
    public String toString() {
+
+      System.out.println("Student Name: " + name);
+
    return null;
 
    }

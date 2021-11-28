@@ -9,7 +9,16 @@ public class Course{
 
    public Course(String code, int number, Department dept, String title) {
 	      // also initialize the classList;
-	 	   
+
+       //assign values to variables
+        code = this.code;
+        number = this.number;
+        dept = this. dept;
+        title = this.title;
+
+        //create a vector list for the students in the class
+        Vector <Student>classList = new Vector<Student>();
+
 	   }
 
    
@@ -22,6 +31,8 @@ public class Course{
      // name, and number of people registered in the course in the following
      // format:
      // SOFE 2710 Object Oriented Programming and Design, Enrollment = 260
+
+      System.out.println(code + "" + number + " " + title + ", Enrollment = " + classList.size());
 
      return null;
   }
