@@ -60,4 +60,11 @@ public class Student extends Person{
 
 	}
 
+	//This method checks whether or not a student is in a certain course
+	public Boolean isRegisteredInCourse(Course course){
+
+		return courses.contains(course);//returns true if the course is found in student's courses vector
+
+	}
+
 }
