@@ -21,6 +21,8 @@ public class Department {
 
 	   }
 
+       //getters and for ID and Name
+
    public String getName() {
 
       return name;
@@ -101,6 +103,44 @@ public class Department {
    public boolean isStudentRegistered(Student student){
 
      return (registerList.contains(student)); //returns true if student is in registerList vector
+
+   }
+
+   //this returns a course's classList after checking that the course is in the department
+   public Vector<Student> studentsRegisteredInCourse(int code){
+
+      //initialize variables
+      boolean found = false;
+      Vector<Student> studentsInCourse = new Vector<Student>(); //create a new vector to return
+
+      //run through the vector elements to see which one is the one we're looking for and id it's there
+      for (int i = 0; i < courseList.size(); i ++){
+
+         //if the ourse is found execute the following
+         if (code==((courseList.elementAt(i)).getCode())){
+
+            //make studentsInCourse equal to the class list of the found course
+            studentsInCourse = (courseList.elementAt(i)).getClassList();
+            found =true; // confirm that the course was found
+            break; //exit loop
+
+         }
+
+      }
+
+      //if the course was found
+      if (found){
+
+         //return the vector
+         return studentsInCourse;
+
+      } else {
+
+         //otherwise return nothing and tell the user the course is not in this department
+         System.out.println("This course is not taught in this department.");
+         return null;
+
+      }
 
    }
 

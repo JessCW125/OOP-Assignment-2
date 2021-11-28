@@ -27,6 +27,20 @@ public class Course{
 	// TODO Auto-generated constructor stub
 
    }
+
+   //returns the number portion of the course code
+   public int getCode(){
+
+       return number;
+
+    }
+
+    //returns the class list vector of students
+    public Vector<Student> getClassList(){
+
+       return classList;
+
+    }
  
   public String toString() {
 
