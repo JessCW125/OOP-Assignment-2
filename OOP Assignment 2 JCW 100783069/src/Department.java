@@ -45,4 +45,13 @@ public class Department {
       return null;
 
    }
+
+   //adds a course to the courseList
+   public void offerCourse(Course course){
+
+      //add course to the vector
+      courseList.add(course);
+
+   }
+
 }
