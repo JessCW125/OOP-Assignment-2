@@ -54,4 +54,17 @@ public class Department {
 
    }
 
+   //This method prints the course info about each course in the department
+   public void printCoursesOffered(){
+
+      //repeat the loop for the same amount of times as the courseList vector size
+      for (int i = 0; i < courseList.size(); i++){
+
+         //print the course info of the ith element of courseList
+         courseList.elementAt(i).toString();
+
+      }
+
+   }
+
 }

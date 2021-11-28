@@ -32,7 +32,7 @@ public class Course{
      // format:
      // SOFE 2710 Object Oriented Programming and Design, Enrollment = 260
 
-      System.out.println(code + "" + number + " " + title + ", Enrollment = " + classList.size());
+      System.out.println(code + " " + number + " " + title + ", Enrollment = " + classList.size());
 
      return null;
   }
