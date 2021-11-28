@@ -91,4 +91,11 @@ public class Department {
 
    }
 
+   //returns whether or not student is registered in a course in the department or not
+   public boolean isStudentRegistered(Student student){
+
+     return (registerList.contains(student)); //returns true if student is in registerList vector
+
+   }
+
 }
