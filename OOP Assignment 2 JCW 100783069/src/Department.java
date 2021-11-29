@@ -156,6 +156,31 @@ public class Department {
 
       }
 
+   }
+
+   //This method returns the course in the department with the most students
+   public Course largestCourse(){
+
+      //initialize/declare ints to hold class and vector sizes and one to hold an index
+      int hold1 = 0, hold2 = 0, indexHold = 0, size;
+
+      size = courseList.size(); // find the size of the course list
+
+      for (int i = 0; i < size; i++){
+
+         hold1 = (courseList.elementAt(i)).getCourseSize();//holds the size of the current course size
+
+         //if hold1 is larger than hold2
+         if (hold1 > hold2){
+
+            hold2 = hold1;//hold2 takes value of hold 1
+            indexHold = i; // indexhold takes the value of the current index value
+
+         }
+
+      }
+
+      return courseList.elementAt(indexHold);//return the course with the largest class size
 
    }
 

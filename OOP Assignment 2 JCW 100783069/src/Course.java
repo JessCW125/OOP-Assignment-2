@@ -41,6 +41,12 @@ public class Course{
        return classList;
 
     }
+
+    public int getCourseSize(){
+
+       return (classList.size());
+
+    }
  
   public String toString() {
 
