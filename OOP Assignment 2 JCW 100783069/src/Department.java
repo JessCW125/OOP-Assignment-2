@@ -97,16 +97,16 @@ public class Department {
 
       //initialize variables
       boolean found = false;
-      Vector<Student> studentsInCourse = new Vector<Student>(); //create a new vector to return
+      int position=0;//initialize position
 
       //run through the vector elements to see which one is the one we're looking for and id it's there
       for (int i = 0; i < courseList.size(); i ++){
 
-         //if the ourse is found execute the following
+         //if the course is found execute the following
          if (code==((courseList.elementAt(i)).getCode())){
 
-            //make studentsInCourse equal to the class list of the found course
-            studentsInCourse = (courseList.elementAt(i)).getClassList();
+            //store current index value in position
+            position = i;
             found =true; // confirm that the course was found
             break; //exit loop
 
@@ -118,7 +118,7 @@ public class Department {
       if (found){
 
          //return the vector
-         return studentsInCourse;
+         return (courseList.elementAt(position)).getClassList();
 
       } else {
 
