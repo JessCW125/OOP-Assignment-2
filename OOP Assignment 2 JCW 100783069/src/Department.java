@@ -59,14 +59,24 @@ public class Department {
 
    }
 
-   //This method prints the course info about each course in the department
+   //This method prints the course info about each course in the department in an arbitrary order
    public void printCoursesOffered(){
+
+      //initialize variables
+      int x;
+      Vector<Course> copy = new Vector<Course>();
 
       //repeat the loop for the same amount of times as the courseList vector size
       for (int i = 0; i < courseList.size(); i++){
 
-         //print the course info of the ith element of courseList
-         courseList.elementAt(i).toString();
+         do{
+
+            x = rand.nextInt(courseList.size());
+
+         } while (!(copy.contains(courseList.elementAt(x))));
+
+         copy.add(courseList.elementAt(x));
+         courseList.elementAt(i).toString(); //print the course info of the ith element of courseList
 
       }
 

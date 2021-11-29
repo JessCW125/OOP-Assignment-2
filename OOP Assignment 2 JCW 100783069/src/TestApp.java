@@ -23,18 +23,18 @@ public class TestApp {
 
 
         // connect courses to departments
-        //ecse.offerCourse(sofe2710);
-        //ecse.offerCourse(sofe2800);
-        //ecse.offerCourse(sofe4610);
-        //ecse.offerCourse(elee4350);
-        //ecse.offerCourse(elee4150);
-        //ecse.offerCourse(elee3250);
-        //ecse.offerCourse(engr1015);
+        ecse.offerCourse(sofe2710);
+        ecse.offerCourse(sofe2800);
+        ecse.offerCourse(sofe4610);
+        ecse.offerCourse(elee4350);
+        ecse.offerCourse(elee4150);
+        ecse.offerCourse(elee3250);
+        ecse.offerCourse(engr1015);
         //
-        //amme.offerCourse(mane2200);
-        //amme.offerCourse(mece3000);
-        //amme.offerCourse(aute3000);
-        //amme.offerCourse(aute4010);
+        amme.offerCourse(mane2200);
+        amme.offerCourse(mece3000);
+        amme.offerCourse(aute3000);
+        amme.offerCourse(aute4010);
 
 
 
