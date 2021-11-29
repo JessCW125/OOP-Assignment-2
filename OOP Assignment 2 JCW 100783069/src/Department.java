@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Vector;
+import java.util.Random;
 
 public class Department {
    private String name; // the name of school Dept of Computing and Info Science
@@ -7,6 +8,7 @@ public class Department {
    private Vector<Course> courseList; // all courses offered by the department
    private Vector<Student> registerList; // all students taking courses in the department.
 
+   Random rand = new Random();
    
    public Department(String name, String id) {
 	      // also initialize the vectors
@@ -83,22 +85,6 @@ public class Department {
 
    }
 
-   //prints student info of all students in the department
-   public void printStudentsByName(){
-
-      //outputs a header
-      System.out.println("These are the students in the " + name + " department: \n");
-
-      //repeat encapsulated content for the same amount of times as registerList's size
-      for (int i = 0; i < registerList.size(); i++){
-
-         //print each student's info
-         registerList.elementAt(i).toString();
-
-      }
-
-   }
-
    //returns whether or not student is registered in a course in the department or not
    public boolean isStudentRegistered(Student student){
 
@@ -141,6 +127,35 @@ public class Department {
          return null;
 
       }
+
+   }
+
+   //this method prints student info of all the students in the course
+   public void printStudentsRegisteredInCourse(int code){
+
+      //print a header
+      System.out.println("These are the students enrolled in " + id + code + ": ");
+
+      int hold, size; //hold will store a random integer, size will hold the size of the student vector
+
+      Vector<Student> courseStudents = studentsRegisteredInCourse(code);//get vector of students in the course
+      size = courseStudents.size(); // get the size of the vector
+      Vector<Student> copy = new Vector<Student>(size); // holds the students that already had their info printed
+
+      //prints the student info in a random order
+      for (int i = 0; i < size; i++){
+
+         do {//find the index of a student whose info hasn't been displayed
+
+            hold = rand.nextInt(size);//find a random number within a possible index of the vector
+
+         } while (!(copy.contains(courseStudents.elementAt(hold)))); // randomize if the student's already been displayed
+
+         copy.add(courseStudents.elementAt(hold)); // add the new student to this vector of students that have already been printed
+         (courseStudents.elementAt(hold)).toString(); // display their info
+
+      }
+
 
    }
 
