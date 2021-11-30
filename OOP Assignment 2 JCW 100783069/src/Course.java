@@ -9,7 +9,6 @@ public class Course{
    private  Vector <Student>classList; // contains all students registered in this course
 
    public Course(String code, int number, Department dept, String title) {
-	      // also initialize the classList;
 
        //assign values to variables
         this.code = code;

@@ -38,8 +38,7 @@ public class TestDriver {
           System.out.println(mece2430);
           System.out.println(ecse);
           System.out.println(amme);
-    
-          
+
           //Student john 
           
           john.registerFor(engr1200);          
@@ -67,7 +66,6 @@ public class TestDriver {
             emily.registerFor(mece2430);
             mece2430.addStudentToCourse(emily);
             amme.registerStudentCourseInDepartment(emily,mece2430);
-
             
           //Student alex
             alex.registerFor(engr1200);
@@ -82,16 +80,14 @@ public class TestDriver {
           System.out.println("List of Depts.");
 	        System.out.println(ecse);
 	        System.out.println(amme);      
-	 
-	      
+
           //print the courses
 	        System.out.println("List of Courses");
 	        System.out.println(engr1200);
           System.out.println(sofe2800);
           System.out.println(sofe2710);
           System.out.println(mece2430);              
-       
-          
+
 	}
 
 }

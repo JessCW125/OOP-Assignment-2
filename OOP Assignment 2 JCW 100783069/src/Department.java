@@ -12,7 +12,6 @@ public class Department {
    Random rand = new Random();//create a random object to generate randomized numbers
    
    public Department(String name, String id) {
-	      // also initialize the vectors
 
       //initialize name and id
       this.name = name;
@@ -37,8 +36,7 @@ public class Department {
       return id;
 
    }
-   
- 	
+
    public String toString() {
 
       // returns a string representation of department name, number 

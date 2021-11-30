@@ -2,7 +2,7 @@ public class Person {
 
    private String   name;
    
-   
+   //constructor for person
    public Person(String initialName) {
 
       name = initialName;
@@ -26,7 +26,7 @@ public class Person {
       return name;
    }
 
-   //prints the person's name
+   //returns the person's name
    public String toString() {
 
       System.out.println("Name: " + name);
