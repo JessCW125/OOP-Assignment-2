@@ -71,12 +71,13 @@ public class Department {
 
          do{
 
+            //assign x a random value between 0 and the courseList size
             x = rand.nextInt(courseList.size());
 
-         } while (!(copy.contains(courseList.elementAt(x))));
+         } while (copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
 
-         copy.add(courseList.elementAt(x));
-         courseList.elementAt(i).toString(); //print the course info of the ith element of courseList
+         copy.add(courseList.elementAt(x)); //add to vector to keep track of what's already been printed
+         courseList.elementAt(x).toString(); //print the course info of the ith element of courseList
 
       }
 
