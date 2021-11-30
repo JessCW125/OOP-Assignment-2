@@ -15,8 +15,8 @@ public class Department {
 	      // also initialize the vectors
 
       //initialize name and id
-      name = this.name;
-      id = this.id;
+      this.name = name;
+      this.id = id;
 
       //create new vectors to store lists of courses and students
       courseList = new Vector<>();
@@ -46,7 +46,7 @@ public class Department {
       // department. Use the format:
       // ECSE: 53 courses, 460 students
 
-      return(name+ ": " + courseList.size() + " courses, " + registerList.size() + " students");
+      return(id+ ": " + courseList.size() + " courses, " + registerList.size() + " students");
 
    }
 
@@ -73,7 +73,7 @@ public class Department {
             //assign x a random value between 0 and the courseList size
             x = rand.nextInt(courseList.size());
 
-         } while (!copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
+         } while (copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
 
          copy.add(courseList.elementAt(x)); //add to vector to keep track of what's already been printed
          courseList.elementAt(x).toString(); //print the course info of the ith element of courseList
@@ -177,7 +177,7 @@ public class Department {
 
             hold = rand.nextInt(size);//find a random number within a possible index of the vector
 
-         } while (!(copy.contains(courseStudents.elementAt(hold)))); // randomize if the student's already been displayed
+         } while (copy.contains(courseStudents.elementAt(hold))); // randomize if the student's already been displayed
 
          copy.add(courseStudents.elementAt(hold)); // add the new student to this vector of students that have already been printed
          (courseStudents.elementAt(hold)).toString(); // display their info

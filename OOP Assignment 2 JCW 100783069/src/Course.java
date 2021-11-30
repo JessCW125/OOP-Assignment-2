@@ -12,10 +12,10 @@ public class Course{
 	      // also initialize the classList;
 
        //assign values to variables
-        code = this.code;
-        number = this.number;
-        dept = this. dept;
-        title = this.title;
+        this.code = code;
+        this.number = number;
+        this.dept = dept;
+        this.title = title;
 
         //create a vector list for the students in the class
         classList = new Vector<>();
