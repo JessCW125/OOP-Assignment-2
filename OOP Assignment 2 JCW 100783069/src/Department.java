@@ -83,6 +83,19 @@ public class Department {
 
    }
 
+   //prints a list of all the students registered in this department
+   public void printStudentsByName(){
+
+      //print each student's name and info
+      for (int i = 0; i < registerList.size(); i++){
+
+         //print tbe current student at the index's position's info
+         (registerList.elementAt(i)).toString();
+
+      }
+
+   }
+
    //adds student to the registerList
    public void addStudentToRegister(Student stud){
 
