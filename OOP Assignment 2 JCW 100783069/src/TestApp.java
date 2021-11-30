@@ -1,6 +1,7 @@
 public class TestApp {
 
     public static void main(String[] args) {
+
         // create a couple of departments
         Department ecse=new Department("Electrical, Computer and Software Engineering", "ECSE");
         Department amme=new Department("Automotive, Mechanical and Mane Engineering", "AAME");
@@ -61,7 +62,7 @@ public class TestApp {
 
 
         //Student Max
-        max.registerFor(mece3000);mece3000.addStudentToCourse(max);    amme.registerStudentCourseInDepartment(max,mece3000);
+        max.registerFor(mece3000); mece3000.addStudentToCourse(max);    amme.registerStudentCourseInDepartment(max,mece3000);
         max.registerFor(sofe2800);sofe2800.addStudentToCourse(max);    ecse.registerStudentCourseInDepartment(max,sofe2800);
         max.registerFor(sofe4610);sofe4610.addStudentToCourse(max);    ecse.registerStudentCourseInDepartment(max,sofe4610);
         max.registerFor(elee4150);elee4150.addStudentToCourse(max);    ecse.registerStudentCourseInDepartment(max,elee4150);
@@ -82,7 +83,7 @@ public class TestApp {
 
 
         // now check to see if it works
-        System.out.println("ECSE Department: "+ecse);
+        System.out.println("ECSE Department: " + ecse);
         System.out.println("AMME Department: "+amme);
         System.out.println("ECSE courses offered: ");
         ecse.printCoursesOffered();
@@ -115,5 +116,6 @@ public class TestApp {
         System.out.println("Largest ecse course: "+ecse.largestCourse());
         System.out.println("Largest amme course: "+amme.largestCourse());
 
-    }	
+    }
+
  }

@@ -18,7 +18,7 @@ public class Course{
         title = this.title;
 
         //create a vector list for the students in the class
-        Vector <Student>classList = new Vector<Student>();
+        classList = new Vector<>();
 
 	   }
 
@@ -43,6 +43,7 @@ public class Course{
 
     }
 
+    //gives the number of students in the class
     public int getCourseSize(){
 
        return (classList.size());
@@ -56,25 +57,15 @@ public class Course{
      // format:
      // SOFE 2710 Object Oriented Programming and Design, Enrollment = 260
 
-      System.out.println(code + " " + number + " " + title + ", Enrollment = " + classList.size());
-
-     return null;
+      return (code + " " + number + " " + title + ", Enrollment = " + classList.size());
 
   }
 
     //this method adds a student to the classList
-  public void addToClassList(Student stud){
+  public void addStudentToCourse(Student stud){
 
        //adds the student to classList vector
        classList.add(stud);
-
-   }
-
-   //adds student to the department's registration list
-   public void addStudToRegister(Student stud){
-
-       //adds student to the list within the department class
-       dept.addStudentToRegister(stud);
 
    }
 

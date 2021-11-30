@@ -16,11 +16,12 @@ public class Student extends Person{
 		id = stdId;
 
 		//create a vector to hold all of the student's enrolled courses
-		Vector<Course> courses = new Vector<Course>();
+		courses = new Vector<>();
 
 	}
 
 	//getters for name and ID
+
 
   	  public String getName() {
 
@@ -39,10 +40,7 @@ public class Student extends Person{
      // 100234546 John McDonald
      // Registered courses: ELEE 2110, ELEE 2790, SOFE 2710, SOFE 2800, SOFE 2850
 
-		System.out.println(id + " " + name);
-		System.out.println("Registered courses: " + courses);
-
-		return null;
+		return(id + " " + name+ "\nRegistered courses: " + courses);
 
   	}
 
@@ -55,8 +53,8 @@ public class Student extends Person{
 		if (!(courses.contains(course))){
 
 			courses.add(course);//adds the course to the student's list
-			course.addToClassList(this);//adds student to the class list
-			course.addStudToRegister(this); //adds student to the course's department's registerList
+			//course.addToClassList(this);//adds student to the class list
+			//course.addStudToRegister(this); //adds student to the course's department's registerList
 
 		}
 

@@ -3,12 +3,13 @@ import java.util.Vector;
 import java.util.Random;
 
 public class Department {
+
    private String name; // the name of school Dept of Computing and Info Science
    private String id; // short name for courses SOFE, ELEE, STAT, etc
    private Vector<Course> courseList; // all courses offered by the department
    private Vector<Student> registerList; // all students taking courses in the department.
 
-   Random rand = new Random();
+   Random rand = new Random();//create a random object to generate randomized numbers
    
    public Department(String name, String id) {
 	      // also initialize the vectors
@@ -18,8 +19,8 @@ public class Department {
       id = this.id;
 
       //create new vectors to store lists of courses and students
-      Vector<Course> courselist = new Vector<Course>();
-      Vector<Student> registerlist = new Vector<Student>();
+      courseList = new Vector<>();
+      registerList = new Vector<>();
 
 	   }
 
@@ -45,9 +46,7 @@ public class Department {
       // department. Use the format:
       // ECSE: 53 courses, 460 students
 
-      System.out.println(name+ ": " + courseList.size() + " courses, " + registerList.size() + " students");
-
-      return null;
+      return(name+ ": " + courseList.size() + " courses, " + registerList.size() + " students");
 
    }
 
@@ -74,7 +73,7 @@ public class Department {
             //assign x a random value between 0 and the courseList size
             x = rand.nextInt(courseList.size());
 
-         } while (copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
+         } while (!copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
 
          copy.add(courseList.elementAt(x)); //add to vector to keep track of what's already been printed
          courseList.elementAt(x).toString(); //print the course info of the ith element of courseList
@@ -97,13 +96,18 @@ public class Department {
    }
 
    //adds student to the registerList
-   public void addStudentToRegister(Student stud){
+   public void registerStudentCourseInDepartment(Student stud, Course course){
 
-      //only adds student to the register list if they aren't already on it
-      if (isStudentRegistered(stud)) {
+      //only adds student if the
+      if (courseList.contains(course)) {
 
-         //adds student to the vector
-         registerList.add(stud);
+         //only adds student to the register list if they aren't already on it
+         if (!isStudentRegistered(stud)) {
+
+            //adds student to the vector
+            registerList.add(stud);
+
+         }
 
       }
 

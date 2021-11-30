@@ -16,11 +16,12 @@ public class TestDriver {
 	      Course mece2430 = new Course("MECE", 2430, amme, "Dynamics");
 
 	      //Create students  
-	        Student john = new Student("100232122", "Jon Maxwell");
+          Student john = new Student("100232122", "Jon Maxwell");
           Student sarah = new Student("100523332", "Sarah Lee");
           Student emily = new Student("100512132", "Emily Johnson");
           Student alex = new Student("100232732", "Alex Williams");
-          
+          Student jane = new Student("100783068", "Jane Holmes");
+
           System.out.println(john);
           System.out.println(sarah);
           john.registerFor(engr1200);
@@ -35,7 +36,6 @@ public class TestDriver {
           System.out.println(mece2430);
           System.out.println(ecse);
           System.out.println(amme);
-       }
     
           
           //Student john 
