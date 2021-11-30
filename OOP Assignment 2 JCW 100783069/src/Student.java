@@ -13,6 +13,7 @@ public class Student extends Person{
 		super(stdName);
 
 		//initialize other variables
+		name = stdName;
 		id = stdId;
 
 		//create a vector to hold all of the student's enrolled courses

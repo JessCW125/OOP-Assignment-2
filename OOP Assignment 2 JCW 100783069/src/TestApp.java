@@ -18,7 +18,7 @@ public class TestApp {
 
         Course mane2200 = new Course("MANE", 2200, amme, "3D Printing");
         Course mece3000 = new Course("MECE", 3000, amme, "Fluid Mechanics");
-        Course aute3000 = new Course("AUTE", 3010, amme, "Intro. to Auto. Engineering");
+        Course aute3000 = new Course("AUTE", 3000, amme, "Intro. to Auto. Engineering");
         Course aute4010 = new Course("AUTE", 4010, amme, "Vehicle Dynamics & Control");
 
 

@@ -76,7 +76,7 @@ public class Department {
          } while (copy.contains(courseList.elementAt(x))); //repeat until an index of courseList.elementAt(x) hasn't been printed
 
          copy.add(courseList.elementAt(x)); //add to vector to keep track of what's already been printed
-         courseList.elementAt(x).toString(); //print the course info of the ith element of courseList
+         System.out.println(courseList.elementAt(x).toString()); //print the course info of the ith element of courseList
 
       }
 
@@ -89,7 +89,7 @@ public class Department {
       for (int i = 0; i < registerList.size(); i++){
 
          //print tbe current student at the index's position's info
-         (registerList.elementAt(i)).toString();
+         System.out.println((registerList.elementAt(i)).toString());
 
       }
 
@@ -161,9 +161,6 @@ public class Department {
    //this method prints student info of all the students in the course
    public void printStudentsRegisteredInCourse(int code){
 
-      //print a header
-      System.out.println("These are the students enrolled in " + id + code + ": ");
-
       int hold, size; //hold will store a random integer, size will hold the size of the student vector
 
       Vector<Student> courseStudents = studentsRegisteredInCourse(code);//get vector of students in the course
@@ -180,7 +177,7 @@ public class Department {
          } while (copy.contains(courseStudents.elementAt(hold))); // randomize if the student's already been displayed
 
          copy.add(courseStudents.elementAt(hold)); // add the new student to this vector of students that have already been printed
-         (courseStudents.elementAt(hold)).toString(); // display their info
+         System.out.println((courseStudents.elementAt(hold)).toString()); // display their info
 
       }
 
