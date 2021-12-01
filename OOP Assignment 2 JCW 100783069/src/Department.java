@@ -2,6 +2,13 @@ import java.util.HashSet;
 import java.util.Vector;
 import java.util.Random;
 
+/***
+ * This class creates a Department object that records the courses it offers and the students registered in them.
+ * It also contains various methods that adds courses to it, returns strings with details about it, displays lists
+ * of courses it offers and students within the department and their information, adds students to the registration list
+ * after they register for a course within the department, prints a list of students in a course in the department,
+ *  returns whether or not a student is within the department, and which course has the most students.
+ */
 public class Department {
 
    private String name; // the name of school Dept of Computing and Info Science
@@ -10,7 +17,13 @@ public class Department {
    private Vector<Student> registerList; // all students taking courses in the department.
 
    Random rand = new Random();//create a random object to generate randomized numbers
-   
+
+   /***
+    * This method constructs the Department object.
+    *
+    * @param name name of the department
+    * @param id the four digit ID of the department
+    */
    public Department(String name, String id) {
 
       //initialize name and id
@@ -25,18 +38,29 @@ public class Department {
 
        //getters and for ID and Name
 
+   /***
+    * Gets the name of the department
+    * @return department name
+    */
    public String getName() {
 
       return name;
 
    }
 
+   /***
+    * Returns the department's ID
+    * @return department ID
+    */
    public String getId() {
 
       return id;
 
    }
 
+   /***
+    * @return Returns a string with the department's ID, the number of courses they offer and how many students are in it
+    */
    public String toString() {
 
       // returns a string representation of department name, number 
@@ -48,7 +72,10 @@ public class Department {
 
    }
 
-   //adds a course to the courseList
+   /***
+    * adds a course to the courseList so that the department offers it
+    * @param course the Course object to be added to the department
+    */
    public void offerCourse(Course course){
 
       //add course to the vector
@@ -56,7 +83,9 @@ public class Department {
 
    }
 
-   //This method prints the course info about each course in the department in an arbitrary order
+   /***
+    * This method prints the course info about each course in the department in an arbitrary order
+    */
    public void printCoursesOffered(){
 
       //initialize variables
@@ -80,7 +109,9 @@ public class Department {
 
    }
 
-   //prints a list of all the students registered in this department
+   /***
+    * prints a list of all the students registered in this department
+    */
    public void printStudentsByName(){
 
       //print each student's name and info
@@ -93,7 +124,11 @@ public class Department {
 
    }
 
-   //adds student to the registerList
+   /***
+    * This method adds student to the registerList
+    * @param stud the student we are adding to the course in the department
+    * @param course the course we are adding the student to in the department
+    */
    public void registerStudentCourseInDepartment(Student stud, Course course){
 
       //only adds student if the
@@ -111,14 +146,24 @@ public class Department {
 
    }
 
-   //returns whether or not student is registered in a course in the department or not
+   /***
+    * returns whether or not student is registered in a course in the department or not
+    * @param student the student we are checking to see if they are in the department or not
+    * @return returns a bool value. True is returned when the student is in the department
+    * and vice versa
+    */
    public boolean isStudentRegistered(Student student){
 
      return (registerList.contains(student)); //returns true if student is in registerList vector
 
    }
 
-   //this returns a course's classList after checking that the course is in the department
+   /***
+    * this returns a course's classList after checking that the course is in the department
+    * @param code the code of the course in the department that we are looking for
+    * @return the class list of the class found. If the course is not found, nothing is returned and a
+    * statement saying that the course is not in the separtment
+    */
    public Vector<Student> studentsRegisteredInCourse(int code){
 
       //initialize variables
@@ -156,7 +201,10 @@ public class Department {
 
    }
 
-   //this method prints student info of all the students in the course
+   /***
+    * this method prints student info of all the students in the course
+    * @param code the code of the course in the department that we are trying to display the classlist for
+    */
    public void printStudentsRegisteredInCourse(int code){
 
       int hold, size; //hold will store a random integer, size will hold the size of the student vector
@@ -181,7 +229,10 @@ public class Department {
 
    }
 
-   //This method returns the course in the department with the most students
+   /***
+    * This method returns the course in the department with the most students
+    * @return course with the most students in it
+    */
    public Course largestCourse(){
 
       //initialize/declare ints to hold class and vector sizes and one to hold an index
