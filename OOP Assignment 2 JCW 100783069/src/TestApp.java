@@ -1,3 +1,8 @@
+/***
+ * This class is used to test the methods in the Department, Course, Person and Student classes. It creates objects from
+ * these classes and does things such as registering students for courses in departments and displays info about them.
+ */
+
 public class TestApp {
 
     public static void main(String[] args) {
