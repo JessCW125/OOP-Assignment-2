@@ -1,3 +1,8 @@
+/***
+ * This class is used to test the Department, Course, Person and Student classes and their methods. In this class,
+ * students are registered for courses in departments and information is displayed about different students, courses
+ * and departments.
+ */
 
 public class TestDriver {
 
